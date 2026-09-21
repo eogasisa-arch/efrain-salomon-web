@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Amor en Silencio</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* TRANSICION GENERAL */
+body {
+font-family: Georgia, serif;
+background: url("fondo_sobreautor_bienvenida.jpg") center/cover no-repeat;
+color: white;
+transition: opacity 0.3s ease;
+}
+
+/* ANIMACION ENTRADA */
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+animation: aparecer 1s ease forwards;
+}
+
+@keyframes aparecer {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* CAPA OSCURA */
+.overlay {
+background: rgba(0,0,0,0.65);
+min-height: 100vh;
+padding: 80px 20px 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* CONTENIDO */
+.contenido {
+max-width: 900px;
+text-align: center;
+}
+
+/* TITULO */
+h1 {
+font-size: 3em;
+margin-bottom: 10px;
+}
+
+/* SUBTITULO */
+.subtitulo {
+font-size: 1.3em;
+margin-bottom: 40px;
+color: #ddd;
+}
+
+/* RESUMEN */
+.resumen {
+font-size: 1.2em;
+margin-bottom: 40px;
+line-height: 1.7;
+}
+
+/* FRASE DESTACADA */
+.frase {
+font-style: italic;
+font-size: 1.5em;
+margin: 50px 0;
+color: #caa64b;
+}
+
+/* TEXTO */
+.texto {
+text-align: justify;
+line-height: 1.9;
+font-size: 1.1em;
+}
+
+/* BOTONES */
+.botones {
+margin-top: 50px;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.boton {
+padding: 12px 25px;
+background: #caa64b;
+color: black;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.boton:hover {
+transform: scale(1.1);
+}
+
+/* VOLVER */
+.volver {
+position: absolute;
+top: 20px;
+left: 20px;
+color: white;
+text-decoration: none;
+font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="obras.html" class="volver">← Volver</a>
+
+<div class="overlay fade-in">
+
+<div class="contenido">
+
+<h1>Amor en Silencio</h1>
+
+<div class="subtitulo">
+El poder invisible de los vínculos humanos
+</div>
+
+<div class="resumen">
+Un libro que no habla del amor perfecto…<br>
+sino del amor real.<br><br>
+
+Una invitación a mirar hacia adentro,
+a comprender lo no dicho y a descubrir que muchas veces
+el amor enseña… cuando ya se ha ido.
+</div>
+
+<div class="frase">
+“El amor no siempre se entiende cuando se vive… sino cuando se recuerda.”
+</div>
+
+<div class="texto">
+
+A veces llega como una experiencia luminosa…
+y otras, como una lección que solo entendemos cuando ya ha dejado huella.<br><br>
+
+En <strong>Amor en Silencio</strong>, Efraín Salomón III nos invita a explorar el lado menos visible de las relaciones:
+los silencios, los malentendidos, las decisiones tomadas sin plena conciencia y las emociones que muchas veces no sabemos expresar.<br><br>
+
+Este no es un libro sobre el amor ideal.
+Es un viaje honesto hacia aquello que no dijimos, no vimos o no supimos comprender a tiempo.<br><br>
+
+A través de una historia profundamente humana, el autor nos confronta con preguntas incómodas pero necesarias:<br><br>
+
+<strong>
+¿Cuánto juzgamos sin conocer?<br>
+¿Cuánto suponemos sin preguntar?<br>
+¿Cuántas veces entendemos… cuando ya es tarde?
+</strong><br><br>
+
+Aquí no encontrarás respuestas perfectas…
+pero sí reflejos.<br><br>
+
+Reflejos de momentos, decisiones y emociones que pueden cambiar la forma en la que entiendes el amor.<br><br>
+
+Porque el amor, en su forma más real,
+no siempre grita… a veces simplemente se va,
+dejando una enseñanza.
+</div>
+
+<div class="botones">
+<a href="#" class="boton">Comprar</a>
+<a href="obras.html" class="boton">Volver a obras</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- TRANSICION ENTRE PAGINAS -->
+<script>
+document.querySelectorAll("a").forEach(link => {
+link.addEventListener("click", function(e) {
+e.preventDefault();
+let destino = this.href;
+
+document.body.style.opacity = "0";
+
+setTimeout(() => {
+window.location.href = destino;
+}, 300);
+});
+});
+</script>
+
+</body>
+</html>

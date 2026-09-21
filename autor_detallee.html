@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
+<title>Author Details | Efraín Salomón III</title>
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+body {
+min-height:100vh;
+font-family:Georgia, serif;
+background-image:url("fondo_sobreautor_bienvenida.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+transition:opacity 0.3s ease;
+}
+.fade-in {
+opacity:0;
+transform:translateY(20px);
+animation:aparecer 1s ease forwards;
+}
+@keyframes aparecer {
+to {opacity:1;transform:translateY(0);}
+}
+/* FLOATING BACK BUTTONS - like blog */
+.volver-flotante {
+position:fixed;
+top:20px;
+left:20px;
+padding:10px 18px;
+background:#111;
+color:#fff;
+border-radius:8px;
+font-size:14px;
+z-index:9999;
+border:1px solid #333;
+text-decoration:none;
+transition:.3s;
+}
+.volver-flotante:hover{background:#caa64b;color:#111;}
+.volver-flotante-2 {
+position:fixed;
+top:20px;
+left:160px;
+padding:10px 18px;
+background:rgba(255,255,255,.08);
+color:#fff;
+border-radius:8px;
+font-size:14px;
+z-index:9999;
+border:1px solid rgba(255,255,255,.15);
+text-decoration:none;
+transition:.3s;
+backdrop-filter:blur(8px);
+}
+.volver-flotante-2:hover{background:#fff;color:#111;}
+.overlay {
+background:rgba(0,0,0,0.6);
+width:100%;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+padding:100px 20px 60px;
+overflow-y:auto;
+}
+.contenido {
+max-width:900px;
+text-align:justify;
+color:white;
+padding-top:20px;
+}
+h1 {
+text-align:center;
+font-size:3em;
+margin-bottom:10px;
+margin-top:10px;
+}
+h2 {
+text-align:center;
+font-size:1.5em;
+margin-bottom:30px;
+font-weight:normal;
+color:#caa64b;
+}
+p {
+font-size:1.15em;
+line-height:1.8;
+margin-bottom:20px;
+}
+.botones {
+margin-top:40px;
+text-align:center;
+}
+.boton {
+display:inline-block;
+padding:12px 25px;
+background:#caa64b;
+color:black;
+text-decoration:none;
+border-radius:5px;
+transition:0.3s;
+margin:10px;
+}
+.boton:hover {
+transform:scale(1.05);
+background:#e8c878;
+}
+@media(max-width:768px){
+.overlay{padding:80px 18px 40px;}
+h1{font-size:2.2em;}
+.volver-flotante-2{left:auto;right:20px;top:70px;}
+.contenido{padding-top:10px;}
+}
+</style>
+</head>
+<body>
+
+<!-- MEJORA 1: Botones flotantes como en blog -->
+<a href="inicio_en.html" class="volver-flotante">← Back to Home</a>
+<a href="sobre_autor-en.html" class="volver-flotante-2">← Back to Author</a>
+
+<div class="overlay fade-in">
+<div class="contenido">
+
+<h1>Efraín Salomón III</h1>
+<h2>Beyond the Words</h2>
+
+<p>
+Efraín Salomón III does not write from theory... he writes from life.
+</p>
+
+<p>
+His journey as an author began through an experience that marked a before and after in his life:
+facing his son's illness. It was during that difficult season that everything that once seemed important
+lost value when compared to what truly mattered.
+</p>
+
+<p>
+That experience did not only transform the way he viewed life...
+it transformed the way he felt, loved, and chose to be present.
+</p>
+
+<p>
+From that moment on, his writing became a bridge:
+between pain and hope,
+between loss and learning,
+between the life we live... and the life we eventually come to understand.
+</p>
+
+<p>
+His books do not seek to teach from a place of perfection,
+but rather to accompany others through real-life experience.
+</p>
+
+<p>
+Every word is born from honesty,
+from mistakes,
+from moments when answers were nowhere to be found...
+yet he chose to keep moving forward.
+</p>
+
+<p>
+Today, his purpose is clear:
+to invite others to pause,
+to look inward,
+and to discover that even in life's most difficult moments,
+a new way of living can emerge.
+</p>
+
+<p>
+Because in the end...
+life is not defined only by what happens to us,
+but by what we choose to do with the experiences that shape us.
+</p>
+
+<div class="botones">
+<a href="sobre_autor-en.html" class="boton">← Back to Author</a>
+<a href="inicio_en.html" class="boton" style="background:#fff;">Back to Home</a>
+</div>
+
+</div>
+</div>
+
+<script>
+document.querySelectorAll("a").forEach(link => {
+link.addEventListener("click", function(e) {
+e.preventDefault();
+let destino = this.href;
+document.body.style.opacity = "0";
+setTimeout(() => {
+window.location.href = destino;
+}, 300);
+});
+});
+</script>
+
+</body>
+</html>

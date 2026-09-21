@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Efraín Salomón III</title>
+
+<style>
+/* RESET */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+font-family: 'Georgia', serif;
+}
+
+/* FONDO PORTADA */
+body {
+background-image: url("fondo-bienvenida.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+/* CAPA OSCURA (overlay elegante) */
+.overlay {
+background: rgba(0, 0, 0, 0.35);
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* CONTENIDO CENTRADO */
+.contenido {
+text-align: center;
+color: white;
+}
+
+/* NOMBRE */
+.titulo {
+font-size: 5vw;
+margin-bottom: 20px;
+}
+
+/* FRASE */
+.frase {
+font-size: 2vw;
+margin-bottom: 40px;
+}
+
+/* BOTONES */
+.botones {
+display: flex;
+gap: 20px;
+justify-content: center;
+}
+
+.boton {
+padding: 15px 30px;
+font-size: 1.2vw;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.espanol {
+background-color: white;
+color: black;
+}
+
+.english {
+background-color: #caa64b;
+color: black;
+}
+
+.boton:hover {
+transform: scale(1.05);
+}
+
+/* RESPONSIVE (celular) */
+@media (max-width: 768px) {
+.titulo {
+font-size: 2em;
+}
+
+.frase {
+font-size: 1.1em;
+padding: 0 20px;
+}
+
+.botones {
+flex-direction: column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+<div class="contenido">
+
+<div class="titulo">Efraín Salomón III</div>
+
+<div class="frase">
+Historias que nacen de la vida…<br>
+y transforman el alma
+</div>
+
+<div class="botones">
+<a href="inicio_es.html" class="boton espanol">Español</a>
+<a href="inicio_en.html" class="boton english">English</a>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

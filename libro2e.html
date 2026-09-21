@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="google" content="notranslate">
+<title>Footprints Along the Way - Vol. I</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* GENERAL TRANSITION */
+body {
+font-family: Georgia, serif;
+background: url("fondo_sobreautor_bienvenida.jpg") center/cover no-repeat;
+color: white;
+transition: opacity 0.3s ease;
+}
+
+/* ENTRY ANIMATION */
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+animation: appear 1s ease forwards;
+}
+
+@keyframes appear {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* OVERLAY */
+.overlay {
+background: rgba(0,0,0,0.65);
+min-height: 100vh;
+padding: 80px 20px 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* CONTENT */
+.contenido {
+max-width: 900px;
+text-align: center;
+}
+
+/* TITLE */
+h1 {
+font-size: 3em;
+margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.subtitulo {
+font-size: 1.3em;
+margin-bottom: 40px;
+color: #ddd;
+}
+
+/* SUMMARY */
+.resumen {
+font-size: 1.2em;
+margin-bottom: 40px;
+line-height: 1.7;
+}
+
+/* QUOTE */
+.frase {
+font-style: italic;
+font-size: 1.5em;
+margin: 50px 0;
+color: #caa64b;
+}
+
+/* TEXT */
+.texto {
+text-align: justify;
+line-height: 1.9;
+font-size: 1.1em;
+}
+
+/* LIST */
+.lista {
+margin: 40px 0;
+text-align: left;
+line-height: 1.8;
+}
+
+/* BUTTONS */
+.botones {
+margin-top: 50px;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.boton {
+padding: 12px 25px;
+background: #caa64b;
+color: black;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.boton:hover {
+transform: scale(1.1);
+}
+
+/* BACK */
+.volver {
+position: absolute;
+top: 20px;
+left: 20px;
+color: white;
+text-decoration: none;
+font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="obrase.html" class="volver">← Back</a>
+
+<div class="overlay fade-in">
+
+<div class="contenido">
+
+<h1>Footprints Along the Way</h1>
+
+<div class="subtitulo">
+From Purpose to Inner Awakening
+</div>
+
+<div class="resumen">
+A true story that transforms the way we understand love, time, and life itself.<br><br>
+
+An invitation to pause,
+look inward,
+and discover that what truly matters
+is not what we give...
+but how fully we are present.
+</div>
+
+<div class="frase">
+“No one should have to lose what they love before understanding its true value.”
+</div>
+
+<div class="texto">
+
+There are moments in life that force us to stop...<br>
+not because we choose to,
+but because we can no longer continue the same way.<br><br>
+
+This book was born from a real, profound, and life-changing experience.
+It tells the story of a father who, in his effort to provide security for his family,
+discovers—at the most unexpected moment—that what matters most is not material success,
+but the things that can never be recovered:
+time, presence, and shared love.<br><br>
+
+Through an experience that shakes the soul,
+Efraín Salomón III takes readers on an intimate journey where fear,
+guilt, faith, and hope intertwine,
+leading to a powerful inner transformation.<br><br>
+
+More than a book,
+it is a mirror.<br>
+An invitation to pause,
+reflect,
+and reconnect with what is truly important.
+
+</div>
+
+<div class="lista">
+<ul>
+<li>Reflections born from real-life experiences</li>
+<li>Lessons about love, family, and purpose</li>
+<li>A call to live with greater awareness and presence</li>
+</ul>
+</div>
+
+<div class="texto">
+
+This is not simply a book to be read...<br>
+it is a book that can change the way you choose to live.
+
+</div>
+
+<div class="botones">
+<a href="#" class="boton">Buy Now</a>
+<a href="obrase.html" class="boton">Back to Books</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- PAGE TRANSITION -->
+<script>
+document.querySelectorAll("a").forEach(link => {
+link.addEventListener("click", function(e) {
+e.preventDefault();
+let destino = this.href;
+
+document.body.style.opacity = "0";
+
+setTimeout(() => {
+window.location.href = destino;
+}, 300);
+});
+});
+</script>
+
+</body>
+</html>

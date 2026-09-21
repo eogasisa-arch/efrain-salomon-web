@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="google" content="notranslate">
+<title>Footprints Along the Way - Vol. II</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* GENERAL TRANSITION */
+body {
+font-family: Georgia, serif;
+background: url("fondo_sobreautor_bienvenida.jpg") center/cover no-repeat;
+color: white;
+transition: opacity 0.3s ease;
+}
+
+/* ENTRY ANIMATION */
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+animation: appear 1s ease forwards;
+}
+
+@keyframes appear {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* OVERLAY */
+.overlay {
+background: rgba(0,0,0,0.65);
+min-height: 100vh;
+padding: 80px 20px 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* CONTENT */
+.contenido {
+max-width: 900px;
+text-align: center;
+}
+
+/* TITLE */
+h1 {
+font-size: 3em;
+margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.subtitulo {
+font-size: 1.3em;
+margin-bottom: 40px;
+color: #ddd;
+}
+
+/* SUMMARY */
+.resumen {
+font-size: 1.2em;
+margin-bottom: 40px;
+line-height: 1.7;
+}
+
+/* QUOTE */
+.frase {
+font-style: italic;
+font-size: 1.5em;
+margin: 50px 0;
+color: #caa64b;
+}
+
+/* TEXT */
+.texto {
+text-align: justify;
+line-height: 1.9;
+font-size: 1.1em;
+}
+
+/* BUTTONS */
+.botones {
+margin-top: 50px;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.boton {
+padding: 12px 25px;
+background: #caa64b;
+color: black;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.boton:hover {
+transform: scale(1.1);
+}
+
+/* BACK */
+.volver {
+position: absolute;
+top: 20px;
+left: 20px;
+color: white;
+text-decoration: none;
+font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="obrase.html" class="volver">← Back</a>
+
+<div class="overlay fade-in">
+
+<div class="contenido">
+
+<h1>Footprints Along the Way</h1>
+
+<div class="subtitulo">
+From Love to Transcendence
+</div>
+
+<div class="resumen">
+A book for those who have already begun their journey...<br>
+and now seek to live with purpose, love, and lasting meaning.<br><br>
+
+An invitation to move beyond merely existing...
+and begin leaving a footprint that endures.
+</div>
+
+<div class="frase">
+“It is not enough to live... we must leave a footprint behind.”
+</div>
+
+<div class="texto">
+
+There comes a moment on the journey when healing is no longer enough.<br><br>
+
+After understanding, rebuilding, and looking inward,
+a new desire begins to emerge:
+the desire to live with purpose.<br><br>
+
+This second volume continues the journey begun in the first book,
+guiding readers toward a deeper dimension of life:
+living intentionally and leaving behind a meaningful legacy.<br><br>
+
+Through intimate reflections and real-life experiences,
+Efraín Salomón III explores the power of love,
+faith, and spiritual connection
+as pathways toward a life of genuine significance.<br><br>
+
+Each page invites readers to pause,
+look within,
+and ask themselves what kind of footprint they are leaving in the world.<br><br>
+
+More than a book,
+it is a quiet companion...<br>
+an invitation to live with greater awareness,
+gratitude, and transcendence.<br><br>
+
+Because in the end,
+it is not what we accumulate that defines our lives...<br>
+but what we leave behind in the hearts of others.
+
+</div>
+
+<div class="botones">
+<a href="#" class="boton">Buy Now</a>
+<a href="obrase.html" class="boton">Back to Books</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- PAGE TRANSITION -->
+<script>
+document.querySelectorAll("a").forEach(link => {
+link.addEventListener("click", function(e) {
+e.preventDefault();
+let destino = this.href;
+
+document.body.style.opacity = "0";
+
+setTimeout(() => {
+window.location.href = destino;
+}, 300);
+});
+});
+</script>
+
+</body>
+</html>

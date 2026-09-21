@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Próximamente</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Georgia, serif;
+background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+text-align: center;
+overflow: hidden;
+}
+
+/* CONTENEDOR */
+.contenido {
+max-width: 800px;
+padding: 20px;
+animation: aparecer 2s ease;
+}
+
+/* TITULO */
+.titulo {
+font-size: 2em;
+letter-spacing: 2px;
+color: #caa64b;
+margin-bottom: 20px;
+}
+
+/* NOMBRE LIBRO */
+.libro {
+font-size: 3em;
+margin-bottom: 20px;
+}
+
+/* SUBTITULO */
+.subtitulo {
+font-size: 1.3em;
+color: #ccc;
+margin-bottom: 40px;
+}
+
+/* TEXTO */
+.texto {
+font-size: 1.2em;
+line-height: 1.6;
+margin-bottom: 40px;
+}
+
+/* FRASE */
+.frase {
+font-style: italic;
+font-size: 1.3em;
+color: #caa64b;
+margin-bottom: 40px;
+}
+
+/* BOTON */
+.boton {
+padding: 12px 25px;
+background: #caa64b;
+color: black;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.boton:hover {
+transform: scale(1.1);
+}
+
+/* VOLVER */
+.volver {
+position: absolute;
+top: 20px;
+left: 20px;
+color: white;
+text-decoration: none;
+font-size: 14px;
+opacity: 0.7;
+}
+
+.volver:hover {
+opacity: 1;
+}
+
+/* ANIMACION */
+@keyframes aparecer {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+</style>
+</head>
+
+<body>
+
+<a href="inicio_es.html" class="volver">← Volver</a>
+
+<div class="contenido">
+
+<div class="titulo">PRÓXIMAMENTE</div>
+
+<div class="libro">
+El Poder de la Certeza
+</div>
+
+<div class="subtitulo">
+Un paso más allá de la Ley de la Atracción
+</div>
+
+<div class="texto">
+Hay momentos en la vida en los que creer ya no es suficiente…<br>
+y se vuelve necesario tener certeza.<br><br>
+
+Este libro es una invitación a ir más allá del pensamiento positivo,
+a comprender el verdadero poder de la convicción interior
+y a descubrir cómo transformar la fe en resultados reales.
+</div>
+
+<div class="frase">
+“Cuando dejas de dudar… empiezas a crear.”
+</div>
+
+<a href="inicio_es.html" class="boton">Volver al inicio</a>
+
+</div>
+
+</body>
+</html>

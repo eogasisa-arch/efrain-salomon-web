@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Silent Love</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* GENERAL TRANSITION */
+body {
+font-family: Georgia, serif;
+background: url("fondo_sobreautor_bienvenida.jpg") center/cover no-repeat;
+color: white;
+transition: opacity 0.3s ease;
+}
+
+/* ENTRY ANIMATION */
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+animation: appear 1s ease forwards;
+}
+
+@keyframes appear {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* DARK OVERLAY */
+.overlay {
+background: rgba(0,0,0,0.65);
+min-height: 100vh;
+padding: 80px 20px 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* CONTENT */
+.contenido {
+max-width: 900px;
+text-align: center;
+}
+
+/* TITLE */
+h1 {
+font-size: 3em;
+margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.subtitulo {
+font-size: 1.3em;
+margin-bottom: 40px;
+color: #ddd;
+}
+
+/* SUMMARY */
+.resumen {
+font-size: 1.2em;
+margin-bottom: 40px;
+line-height: 1.7;
+}
+
+/* FEATURED QUOTE */
+.frase {
+font-style: italic;
+font-size: 1.5em;
+margin: 50px 0;
+color: #caa64b;
+}
+
+/* TEXT */
+.texto {
+text-align: justify;
+line-height: 1.9;
+font-size: 1.1em;
+}
+
+/* BUTTONS */
+.botones {
+margin-top: 50px;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.boton {
+padding: 12px 25px;
+background: #caa64b;
+color: black;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.boton:hover {
+transform: scale(1.1);
+}
+
+/* BACK */
+.volver {
+position: absolute;
+top: 20px;
+left: 20px;
+color: white;
+text-decoration: none;
+font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="obrase.html" class="volver">← Back</a>
+
+<div class="overlay fade-in">
+
+<div class="contenido">
+
+<h1>Silent Love</h1>
+
+<div class="subtitulo">
+The Invisible Power of Human Connection
+</div>
+
+<div class="resumen">
+A book that is not about perfect love...<br>
+but about real love.<br><br>
+
+An invitation to look within,
+to understand what was left unsaid,
+and to discover that sometimes
+love teaches its greatest lessons...
+only after it is gone.
+</div>
+
+<div class="frase">
+“Love is not always understood while we are living it... sometimes it is only understood when we look back.”
+</div>
+
+<div class="texto">
+
+Sometimes love arrives as a beautiful experience...
+and other times as a lesson we only understand after it has left its mark.<br><br>
+
+In <strong>Silent Love</strong>, Efraín Salomón III invites readers to explore the less visible side of human relationships:
+the silences, the misunderstandings, the choices made without full awareness, and the emotions we often struggle to express.<br><br>
+
+This is not a book about idealized love.
+It is an honest journey into what we failed to say, failed to see, or failed to understand when it mattered most.<br><br>
+
+Through a deeply human story, the author challenges us with uncomfortable but necessary questions:<br><br>
+
+<strong>
+How often do we judge without truly knowing?<br>
+How often do we assume without asking?<br>
+How many times do we finally understand... when it is already too late?
+</strong><br><br>
+
+You will not find perfect answers here...
+but you may find reflections.<br><br>
+
+Reflections of moments, decisions, and emotions that can transform the way you understand love.<br><br>
+
+Because love, in its most authentic form,
+does not always shout.
+Sometimes it quietly walks away,
+leaving behind a lesson that lasts forever.
+
+</div>
+
+<div class="botones">
+<a href="#" class="boton">Buy Now</a>
+<a href="obrase.html" class="boton">Back to Books</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- PAGE TRANSITION -->
+<script>
+document.querySelectorAll("a").forEach(link => {
+link.addEventListener("click", function(e) {
+e.preventDefault();
+let destino = this.href;
+
+document.body.style.opacity = "0";
+
+setTimeout(() => {
+window.location.href = destino;
+}, 300);
+});
+});
+</script>
+
+</body>
+</html>

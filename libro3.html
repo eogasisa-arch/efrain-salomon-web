@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Huellas en el Camino</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* TRANSICION GENERAL */
+body {
+font-family: Georgia, serif;
+background: url("fondo_sobreautor_bienvenida.jpg") center/cover no-repeat;
+color: white;
+transition: opacity 0.3s ease;
+}
+
+/* ANIMACION ENTRADA */
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+animation: aparecer 1s ease forwards;
+}
+
+@keyframes aparecer {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* OVERLAY */
+.overlay {
+background: rgba(0,0,0,0.65);
+min-height: 100vh;
+padding: 80px 20px 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* CONTENIDO */
+.contenido {
+max-width: 900px;
+text-align: center;
+}
+
+/* TITULO */
+h1 {
+font-size: 3em;
+margin-bottom: 10px;
+}
+
+/* SUBTITULO */
+.subtitulo {
+font-size: 1.3em;
+margin-bottom: 40px;
+color: #ddd;
+}
+
+/* RESUMEN */
+.resumen {
+font-size: 1.2em;
+margin-bottom: 40px;
+line-height: 1.7;
+}
+
+/* FRASE */
+.frase {
+font-style: italic;
+font-size: 1.5em;
+margin: 50px 0;
+color: #caa64b;
+}
+
+/* TEXTO */
+.texto {
+text-align: justify;
+line-height: 1.9;
+font-size: 1.1em;
+}
+
+/* BOTONES */
+.botones {
+margin-top: 50px;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.boton {
+padding: 12px 25px;
+background: #caa64b;
+color: black;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.boton:hover {
+transform: scale(1.1);
+}
+
+/* VOLVER */
+.volver {
+position: absolute;
+top: 20px;
+left: 20px;
+color: white;
+text-decoration: none;
+font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="obras.html" class="volver">← Volver</a>
+
+<div class="overlay fade-in">
+
+<div class="contenido">
+
+<h1>Huellas en el Camino</h1>
+
+<div class="subtitulo">
+Del amor a la trascendencia
+</div>
+
+<div class="resumen">
+Un libro para quienes ya iniciaron su camino…<br>
+y ahora desean vivir con propósito, amor y trascendencia.<br><br>
+
+Una invitación a dejar de solo existir…
+y empezar a dejar una huella que permanezca.
+</div>
+
+<div class="frase">
+“No basta con vivir… hay que dejar una huella.”
+</div>
+
+<div class="texto">
+
+Hay un momento en el camino en el que sanar ya no es suficiente.<br><br>
+
+Después de comprender, de reconstruirse y de mirar hacia adentro,
+surge una nueva necesidad: vivir con sentido.<br><br>
+
+Esta segunda obra continúa el viaje iniciado en el primer volumen,
+llevando al lector hacia una dimensión más profunda:
+la de vivir con propósito y dejar un legado significativo.<br><br>
+
+A través de reflexiones íntimas y experiencias reales,
+Efraín Salomón III explora el poder del amor,
+la fe y la conexión espiritual como caminos
+hacia una vida con verdadero significado.<br><br>
+
+Cada página invita a detenerse,
+a mirar hacia adentro
+y a preguntarse qué huella estamos dejando en el mundo.<br><br>
+
+Más que un libro, es una guía silenciosa…<br>
+una invitación a vivir con mayor conciencia,
+gratitud y trascendencia.<br><br>
+
+Porque al final,
+no es lo que acumulamos lo que define nuestra vida…<br>
+sino lo que dejamos en el corazón de los demás.
+
+</div>
+
+<div class="botones">
+<a href="#" class="boton">Comprar</a>
+<a href="obras.html" class="boton">Volver a obras</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- TRANSICION ENTRE PAGINAS -->
+<script>
+document.querySelectorAll("a").forEach(link => {
+link.addEventListener("click", function(e) {
+e.preventDefault();
+let destino = this.href;
+
+document.body.style.opacity = "0";
+
+setTimeout(() => {
+window.location.href = destino;
+}, 300);
+});
+});
+</script>
+
+</body>
+</html>

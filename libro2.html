@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Huellas en el Camino</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* TRANSICION GENERAL */
+body {
+font-family: Georgia, serif;
+background: url("fondo_sobreautor_bienvenida.jpg") center/cover no-repeat;
+color: white;
+transition: opacity 0.3s ease;
+}
+
+/* ANIMACION ENTRADA */
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+animation: aparecer 1s ease forwards;
+}
+
+@keyframes aparecer {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* OVERLAY */
+.overlay {
+background: rgba(0,0,0,0.65);
+min-height: 100vh;
+padding: 80px 20px 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* CONTENIDO */
+.contenido {
+max-width: 900px;
+text-align: center;
+}
+
+/* TITULO */
+h1 {
+font-size: 3em;
+margin-bottom: 10px;
+}
+
+/* SUBTITULO */
+.subtitulo {
+font-size: 1.3em;
+margin-bottom: 40px;
+color: #ddd;
+}
+
+/* RESUMEN */
+.resumen {
+font-size: 1.2em;
+margin-bottom: 40px;
+line-height: 1.7;
+}
+
+/* FRASE */
+.frase {
+font-style: italic;
+font-size: 1.5em;
+margin: 50px 0;
+color: #caa64b;
+}
+
+/* TEXTO */
+.texto {
+text-align: justify;
+line-height: 1.9;
+font-size: 1.1em;
+}
+
+/* LISTA */
+.lista {
+margin: 40px 0;
+text-align: left;
+line-height: 1.8;
+}
+
+/* BOTONES */
+.botones {
+margin-top: 50px;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.boton {
+padding: 12px 25px;
+background: #caa64b;
+color: black;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.boton:hover {
+transform: scale(1.1);
+}
+
+/* VOLVER */
+.volver {
+position: absolute;
+top: 20px;
+left: 20px;
+color: white;
+text-decoration: none;
+font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="obras.html" class="volver">← Volver</a>
+
+<div class="overlay fade-in">
+
+<div class="contenido">
+
+<h1>Huellas en el Camino</h1>
+
+<div class="subtitulo">
+Del propósito al despertar interior
+</div>
+
+<div class="resumen">
+Una historia real que transforma la manera de entender el amor, el tiempo y la vida.<br><br>
+
+Una invitación a detenerse,
+mirar hacia adentro y descubrir que lo verdaderamente importante
+no está en lo que damos… sino en cómo estamos presentes.
+</div>
+
+<div class="frase">
+“Nadie debería esperar a perder lo que ama para entender su verdadero valor.”
+</div>
+
+<div class="texto">
+
+Hay momentos en la vida que nos obligan a detenernos…<br>
+no por elección, sino porque ya no podemos seguir igual.<br><br>
+
+Este libro nace de una experiencia real, profunda y transformadora.
+La historia de un padre que, en su esfuerzo por brindar seguridad a su familia,
+descubre —en el momento más inesperado— que lo esencial no siempre es lo material,
+sino aquello que no se puede recuperar: el tiempo, la presencia, el amor compartido.<br><br>
+
+A través de una vivencia que sacude el alma,
+Efraín Salomón III nos lleva por un viaje íntimo donde el miedo,
+la culpa, la fe y la esperanza se entrelazan para dar paso
+a una poderosa transformación interior.<br><br>
+
+Más que un libro, es un espejo.<br>
+Una invitación a detenerse, a reflexionar y a reconectar
+con lo verdaderamente importante.
+
+</div>
+
+<div class="lista">
+<ul>
+<li>Reflexiones nacidas de experiencias reales</li>
+<li>Lecciones sobre el amor, la familia y el propósito</li>
+<li>Un llamado a vivir con mayor conciencia y presencia</li>
+</ul>
+</div>
+
+<div class="texto">
+
+Este no es un libro que simplemente se lee…<br>
+es un libro que puede cambiar la forma en la que eliges vivir.
+
+</div>
+
+<div class="botones">
+<a href="#" class="boton">Comprar</a>
+<a href="obras.html" class="boton">Volver a obras</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- TRANSICION ENTRE PAGINAS -->
+<script>
+document.querySelectorAll("a").forEach(link => {
+link.addEventListener("click", function(e) {
+e.preventDefault();
+let destino = this.href;
+
+document.body.style.opacity = "0";
+
+setTimeout(() => {
+window.location.href = destino;
+}, 300);
+});
+});
+</script>
+
+</body>
+</html>
